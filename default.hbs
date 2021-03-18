@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.lang}}">
+<html lang="{{@site.locale}}">
 
 <head>
 
@@ -48,44 +48,6 @@
         </footer>
 
     </div>
-
-    {{!-- The big email subscribe modal content --}}
-    {{#if @labs.members}}
-    <div class="subscribe-success-message">
-        <a class="subscribe-close" href="javascript:;"></a>
-        Та {{@site.title}}-д бүртгүүллээ!
-    </div>
-
-    <div id="subscribe" class="subscribe-overlay">
-        <a class="subscribe-close-overlay" href="#"></a>
-        <a class="subscribe-close-button" href="#"></a>
-        <div class="subscribe-overlay-content">
-            {{#if @site.logo}}
-            <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
-            {{/if}}
-            <div class="subscribe-form">
-                <h1 class="subscribe-overlay-title">{{@site.title}}-д бүртгүүлэх</h1>
-                <p class="subscribe-overlay-description">Сүүлийн үеийн мэдээллийг цахим шуудандаа хүлээн аваарай.</p>
-                <form data-members-form="subscribe">
-                    <div class="form-group">
-                        <input class="subscribe-email" data-members-email placeholder="youremail@example.com"
-                            autocomplete="false" />
-                        <button class="button primary" type="submit">
-                            <span class="button-content">Бүртгүүлэх</span>
-                            <span class="button-loader">{{> "icons/loader"}}</span>
-                        </button>
-                    </div>
-                    <div class="message-success">
-                        <strong>Гайхалтай!</strong> Цахим шуудангаа шалгаад ирсэн холбоос дээр дарж баталгаажуулна уу.
-                    </div>
-                    <div class="message-error">
-                        Зөв цахим шуудангийн хаяг оруулна уу!
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    {{/if}}
 
     {{!-- jQuery, required for fitvids --}}
     <script
